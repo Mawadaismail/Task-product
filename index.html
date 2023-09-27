@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+    body {
+        background-color: black;
+    }
+
+    h1 {
+        text-align: center;
+        color: wheat;
+    }
+
+    .line {
+        width: 7%;
+        height: 2px;
+        background-color: rgb(228, 193, 249);
+        margin: auto;
+        transition: 0.5s;
+    }
+
+    .title:hover .line {
+        width: 15%;
+    }
+
+    .parent {
+        margin-left: 18%;
+        margin-top: 20px;
+    }
+
+    .pro {
+        width: 35%;
+        height: 57vh;
+        margin-top: 20px;
+        margin-left: 20px;
+        display: inline-block;
+        text-align: center;
+        padding: 15px 20px;
+        transition: 2s;
+        box-shadow: 0px 0px 15px rgb(228, 193, 249);
+
+    }
+
+    h3 {
+        margin-top: 25px;
+        color: white;
+        font-family: 'Satisfy', cursive;
+        text-transform: capitalize;
+    }
+
+    img {
+        width: 55%;
+        transition: 1s;
+        margin-top: 20px;
+    }
+
+    .pro:hover img {
+        transform: scale(1.2);
+    }
+
+    #priceproduct1 {
+        display: none;
+    }
+
+    #priceproduct2 {
+        display: none;
+    }
+
+    #priceproduct3 {
+        display: none;
+    }
+
+    #priceproduct4 {
+        display: none;
+    }
+
+    #priceproduct5 {
+        display: none;
+    }
+
+    #priceproduct6 {
+        display: none;
+    }
+
+    #priceproduct7 {
+        display: none;
+    }
+
+    #priceproduct8 {
+        display: none;
+    }
+
+    .product {
+        margin-top: 10px;
+        color: white;
+        height: 10px;
+        font-size: 25px;
+    }
+
+    #text1 {
+        margin-top: 20px;
+        color: rgb(123, 44, 101);
+        background-color: white;
+        width: 10%;
+    }
+
+    button {
+        background-color: rgb(228, 193, 249);
+        color: black;
+        padding: 10px 30px;
+        font-size: 18px;
+    }
+</style>
+
+<body>
+    <div class="title">
+        <h1>Vassa Products</h1>
+        <div class="line"></div>
+    </div>
+
+    <section class="parent">
+        <div price="50" class="pro">
+            <img src="img/e545ffdfc607e09351e6c663a0d9a8ad.jpg" alt="">
+            <h3>Fashion Yellow Vase</h3>
+            <button id="btn1">show price</button>
+            <div id="priceproduct1" class="product">50$</div>
+        </div>
+        <div price="100" class="pro">
+            <img src="img/b24156cae6b2f6adabb541f712ceecc1.jpg" alt="">
+            <h3>small white baby vasa</h3>
+            <button id="btn2">show price</button>
+            <div id="priceproduct2" class="product">100$</div>
+        </div>
+        <div price="150" class="pro">
+            <img src="img/82d622ee389612204289cdad1282b58d.jpg" alt="">
+            <h3>exquisite flower vase </h3>
+            <button id="btn3">show price</button>
+            <div id="priceproduct3" class="product">150$</div>
+        </div>
+        <div price="200" class="pro">
+            <img src="img/0f8500c9eeb625291dbb96ac2291d88c.jpg" alt="">
+            <h3>Creative Large Glass vasa</h3>
+            <button id="btn4">show price</button>
+            <div id="priceproduct4" class="product">200$</div>
+        </div>
+        <div price="350" class="pro">
+            <img src="img/4fef7db93e1f23bfa861b1001642204b.jpg" alt="">
+            <h3>qualts Vassa</h3>
+            <button id="btn5">show price</button>
+            <div id="priceproduct5" class="product">350$</div>
+        </div>
+        <div price="400" class="pro">
+            <img src="img/7ec031661793f85fc4753acd5a9c7471.jpg" alt="">
+            <h3> ceramic vase perfect</h3>
+            <button id="btn6">show price</button>
+            <div id="priceproduct6" class="product">400$</div>
+        </div>
+        <div price="660" class="pro">
+            <img src="img/4c3bcc05e8a9a8e9f7b183c36137e9c6.jpg" alt="">
+            <h3>La Main Vasaccessorize</h3>
+            <button id="btn7">show price</button>
+            <div id="priceproduct7" class="product">660$</div>
+        </div>
+        <div price="1000" class="pro">
+            <img src="img/2d228f02b8543ca6a5f0ffa035ae5a20.jpg" alt="">
+            <h3>Nordic Ceramic Vase Decoration</h3>
+            <button id="btn8">show price</button>
+            <div id="priceproduct8" class="product">1000$</div>
+        </div>
+
+    </section>
+    <div id="text1"></div>
+    <button id="btns">Total</button>
+    <script>
+
+        var allProducts = document.querySelectorAll(".pro")
+        var btn = document.getElementById("btn1")
+        var btn2 = document.getElementById("btn2")
+        var btn3 = document.getElementById("btn3")
+        var btn4 = document.getElementById("btn4")
+        var btn5 = document.getElementById("btn5")
+        var btn6 = document.getElementById("btn6")
+        var btn7 = document.getElementById("btn7")
+        var btn8 = document.getElementById("btn8")
+
+
+        btn.onclick = function () {
+            document.getElementById("priceproduct1").style.display = "block"
+            document.getElementById("priceproduct2").style.display = "none"
+            document.getElementById("priceproduct3").style.display = "none"
+        }
+        btn2.onclick = function () {
+            document.getElementById("priceproduct2").style.display = "block"
+            document.getElementById("priceproduct1").style.display = "none"
+            document.getElementById("priceproduct3").style.display = "none"
+
+        }
+        btn3.onclick = function () {
+            document.getElementById("priceproduct3").style.display = "block"
+            document.getElementById("priceproduct2").style.display = "none"
+            document.getElementById("priceproduct4").style.display = "none"
+        }
+        btn4.onclick = function () {
+            document.getElementById("priceproduct4").style.display = "block"
+            document.getElementById("priceproduct3").style.display = "none"
+        }
+        btn5.onclick = function () {
+            document.getElementById("priceproduct5").style.display = "block"
+            document.getElementById("priceproduct4").style.display = "none"
+        }
+        btn6.onclick = function () {
+            document.getElementById("priceproduct6").style.display = "block"
+            document.getElementById("priceproduct5").style.display = "none"
+        }
+        btn7.onclick = function () {
+            document.getElementById("priceproduct7").style.display = "block"
+            document.getElementById("priceproduct6").style.display = "none"
+            document.getElementById("priceproduct8").style.display = "none"
+
+        }
+        btn8.onclick = function () {
+            document.getElementById("priceproduct8").style.display = "block"
+            document.getElementById("priceproduct7").style.display = "none"
+        }
+        var div = document.querySelector(".product")
+        var btns = document.querySelector("#btns")
+        var totalPrice = 0
+        var text = document.getElementById("text1")
+
+        allProducts.forEach(function (item) {
+            item.onclick = function () {
+                totalPrice += +(item.getAttribute("price"))
+            }
+        })
+        btns.onclick = function () {
+            text.innerHTML = totalPrice + "$"
+        }
+
+    </script>
+</body>
+
+</html>
